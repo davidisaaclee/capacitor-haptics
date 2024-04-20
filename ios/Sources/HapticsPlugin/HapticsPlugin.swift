@@ -23,8 +23,9 @@ public class HapticsPlugin: CAPPlugin, CAPBridgedPlugin {
                 impactStyle = UIImpactFeedbackGenerator.FeedbackStyle.light
             }
         }
+        let intensity = call.options["intensity"] as? CGFloat
         DispatchQueue.main.async {
-            self.implementation.impact(impactStyle)
+            self.implementation.impact(impactStyle, intensity: intensity ?? 1)
         }
         call.resolve()
     }

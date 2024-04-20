@@ -55,6 +55,11 @@ export interface ImpactOptions {
    * @since 1.0.0
    */
   style: ImpactStyle;
+
+  /**
+   * The intensity of the haptic feedback - iOS only
+   */
+  intensity?: number;
 }
 
 export enum ImpactStyle {

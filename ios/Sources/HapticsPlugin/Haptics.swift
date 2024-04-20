@@ -6,9 +6,9 @@ import CoreHaptics
 
     var selectionFeedbackGenerator: UISelectionFeedbackGenerator?
 
-    @objc public func impact(_ impactStyle: UIImpactFeedbackGenerator.FeedbackStyle) {
+    @objc public func impact(_ impactStyle: UIImpactFeedbackGenerator.FeedbackStyle, intensity: CGFloat) {
         let generator = UIImpactFeedbackGenerator(style: impactStyle)
-        generator.impactOccurred()
+        generator.impactOccurred(intensity: intensity)
     }
 
     @objc public func notification(_ notificationType: UINotificationFeedbackGenerator.FeedbackType) {
