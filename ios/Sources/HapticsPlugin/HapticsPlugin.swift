@@ -15,6 +15,7 @@ public class HapticsPlugin: CAPPlugin, CAPBridgedPlugin {
     private let implementation = Haptics()
 
     @objc public func impact(_ call: CAPPluginCall) {
+      print("Using haptics fork")
         var impactStyle = UIImpactFeedbackGenerator.FeedbackStyle.heavy
         if let style = call.options["style"] as? String {
             if style == "MEDIUM" {
